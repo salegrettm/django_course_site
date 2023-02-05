@@ -12,6 +12,7 @@
 {% endblock %}
 
 {% block body %}
+{% if meetup_found %}
 <article>
   <img src="" alt="">
   <section id="location">
@@ -30,4 +31,9 @@
     FORM
   </section>
 </article>
+{% else %}
+<article>
+  <p>No Meetups were found with that slug 😢</p>
+</article>
+{% endif %}
 {% endblock %}
